@@ -1,0 +1,30 @@
+
+.img-of-me{
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 50%;
+  animation: fadein 2s;
+
+}
+
+.about-text-anim{
+    animation: fadein 2s;
+  }
+
+.social-links{
+  text-align: center;
+}
+
+.social-links a {
+    background-color: white;
+    margin: 6px;
+    border-radius: 100%;
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    animation: fadein 2s;
+  }
+  .social-links i {
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }

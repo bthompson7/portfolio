@@ -1,0 +1,20 @@
+
+.experience{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .experience-block {
+    margin: 10px;
+    text-align: center;
+    font-size: 17px;
+  }
+  
+  .experience-block a{
+    display: block;
+  }
+  .experience-block img {
+    width: 100px;
+    height: 100px;
+  }
