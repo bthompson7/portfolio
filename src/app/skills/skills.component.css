@@ -1,0 +1,11 @@
+.section i {
+    font-size: 6rem;
+}
+
+
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

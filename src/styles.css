@@ -1,6 +1,8 @@
 /* Global Styles */
 
 @import "~font-awesome/css/font-awesome.min.css";
+@import "devicon/devicon.min.css";
+
 
 html {
     background-color: #282c34; 
