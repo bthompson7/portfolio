@@ -1,5 +1,7 @@
 .section i {
     font-size: 6rem;
+    flex: 0 0 21%;
+
 }
 
 
@@ -8,4 +10,5 @@
     flex-wrap: wrap;
     margin-top: 25px;
     margin-bottom: 25px;
+    justify-content: center;
 }
