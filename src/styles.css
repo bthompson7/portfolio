@@ -50,3 +50,19 @@ html {
     border-bottom: 1px solid #cec8c8;
     text-transform: uppercase;
   }
+
+
+  /* skills css shared by both skills and experience  */
+  .section i {
+    font-size: 6rem;
+    flex: 0 0 21%;
+
+}
+
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
