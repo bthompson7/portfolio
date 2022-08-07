@@ -1,0 +1,30 @@
+
+.project-info img{
+    display: flex;
+    width: auto;
+}
+
+
+.project-info a{
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+
+
+    
+}

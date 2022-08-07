@@ -6,6 +6,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { MainComponent } from './main/main.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavComponent } from './nav/nav.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NavComponent } from './nav/nav.component';
     SkillsComponent,
     ExperienceComponent,
     MainComponent,
-    NavComponent
+    NavComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

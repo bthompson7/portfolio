@@ -22,12 +22,9 @@ export class NavComponent implements OnInit, AfterViewInit {
       var siteNavSideBtn = this.siteNavSide.nativeElement.style.display;
       if (siteNavSideBtn !== 'flex') {
         this.siteNavSide.nativeElement.style.display = 'flex';
-        this.siteNavSide.nativeElement.style.class = 'fa fa-solid fa fa-xmark'
-
+        this.siteNavSide.nativeElement.style.justifyContent = 'center';
       } else {
         this.siteNavSide.nativeElement.style.display = 'none';
-        this.siteNavSide.nativeElement.style.class = 'fa fa solid fa fa-bars'
-
       }
 
     }
