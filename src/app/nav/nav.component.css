@@ -38,7 +38,6 @@
     margin-top: 10px;
     min-height: 3em;
     display: none;
-    animation: fadein 0.5s;
   }
   
   .site-nav-side li, a, ul {
@@ -51,6 +50,6 @@
   }
   
   a:hover{
-    color: blue;
+    color: red;
   }
   

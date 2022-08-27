@@ -33,6 +33,7 @@ export class NavComponent implements OnInit, AfterViewInit {
 
         // menu css
         this.siteNavSide.nativeElement.style.display = 'flex';
+        this.siteNavSide.nativeElement.style.animation = 'fadein 0.5s';
         this.siteNavSide.nativeElement.style.justifyContent = 'center';
       } else {
         this.siteNavSide.nativeElement.style.display = 'none';

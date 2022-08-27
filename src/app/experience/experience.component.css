@@ -1,3 +1,7 @@
+.title-and-time p{
+  display: inline;
+  margin: 5px;
+}
 
 .experience{
     display: flex;
@@ -14,7 +18,9 @@
   .experience-block a{
     display: block;
   }
+
   .experience-block img {
     width: 100px;
     height: 100px;
   }
+
