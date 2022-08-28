@@ -1,12 +1,4 @@
-
-.img-of-me{
-  height: 40vmin;
-  pointer-events: none;
-  border-radius: 50%;
-  animation: fadein 2s;
-}
-
 .about-anim{
-    animation: wipe-enter 0.5s;
-  }
+    animation: zoom-in 1s;
+}
 
