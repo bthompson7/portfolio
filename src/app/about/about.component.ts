@@ -8,9 +8,10 @@ import AOS from "aos";
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    AOS.init({ once: true });
+  }
 
   ngOnInit(): void {
-    AOS.init({ once: true });
   }
 }
