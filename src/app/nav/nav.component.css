@@ -5,13 +5,11 @@
     background-color: #fff;
     position: fixed;
     top: 0;
-    z-index: 10000;
+    z-index: 2;
     width: 100%;
     transition: top 0.3s;
     min-height: 2.5em;
     left:0;
-    
-
 }
 
 .nav-bar-top button {
@@ -24,7 +22,6 @@
     background-size: auto;
     min-height: 3em;
     z-index: 2;
-
   }
 
   .nav-bar-top i{
@@ -42,7 +39,6 @@
     min-height: 3em;
     display: none;
     z-index: 1;
-
   }
   
   .site-nav-side li, a, ul {
@@ -52,7 +48,6 @@
     text-transform: uppercase;
     text-decoration: none;
     justify-content: center;
-
   }
   
   a:hover{
