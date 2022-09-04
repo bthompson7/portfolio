@@ -1,5 +1,4 @@
 
-
 .nav-bar-top{
     display: flex;
     background-color: #fff;
@@ -8,7 +7,7 @@
     z-index: 2;
     width: 100%;
     transition: top 0.3s;
-    min-height: 2.5em;
+    min-height: 4em;
     left:0;
 }
 
@@ -16,11 +15,11 @@
     position: fixed;
     right: 0;
     top: 0;
+    background: none;
+    border: none;
     background-color: transparent;
     display: inline-block;
-    width: 3em;
-    background-size: auto;
-    min-height: 3em;
+    padding: 16px;
     z-index: 2;
   }
 
