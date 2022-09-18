@@ -15,6 +15,12 @@ body {
   padding: 0;
 }
 
+  /* vars */
+  
+  :root {
+    --background: #282c34;
+  }
+
   /* animations */
 
   @keyframes wipe-enter {
@@ -47,7 +53,7 @@ body {
   /* section css */
 
 .section {
-    background-color: #282c34;
+    background-color: var(--background);
     min-height: 100vh;
     height: auto;
     display: flex;
@@ -100,10 +106,4 @@ body {
   .social-links i {
     font-size: 2rem;
     line-height: 3.5rem;
-  }
-
-  /* vars */
-  
-  :root {
-    --background: #282c34;
   }

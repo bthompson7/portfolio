@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../service/backend.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() {
+  constructor(private backendService: BackendService) {
   }
 
   ngOnInit(): void {
+    this.backendService.logRequest().subscribe();
+
   }
 }

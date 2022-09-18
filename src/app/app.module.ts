@@ -8,6 +8,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavComponent } from './nav/nav.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BackendService } from './service/backend.service';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }
