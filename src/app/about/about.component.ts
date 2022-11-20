@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../service/backend.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-about',
@@ -9,10 +10,12 @@ import { BackendService } from '../service/backend.service';
 export class AboutComponent implements OnInit {
 
   constructor(private backendService: BackendService) {
+
   }
 
   ngOnInit(): void {
-    this.backendService.logRequest().subscribe();
-
+    if (environment.production) {
+      this.backendService.logRequest().subscribe();
+    }
   }
 }
