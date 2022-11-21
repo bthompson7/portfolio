@@ -71,13 +71,12 @@ body {
     text-transform: uppercase;
   }
 
-
-  /* skills css */
-
   .section i {
     font-size: 6rem;
     flex: 0 0 21%;
 }
+
+  /* skills css */
 
 .skills-list{
     display: flex;
@@ -85,6 +84,10 @@ body {
     margin-top: 25px;
     margin-bottom: 25px;
     justify-content: center;
+}
+
+.skills-list i {
+  padding:5px
 }
 
 /* social links */
