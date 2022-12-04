@@ -9,6 +9,15 @@
     transition: top 0.3s;
     min-height: 4em;
     left:0;
+    margin-bottom: 50px;
+}
+
+li{
+  color:black;
+}
+
+li:hover{
+  color: gray;
 }
 
 .nav-bar-top button {
@@ -27,7 +36,15 @@
     font-size: 30px;
   }
 
-.site-nav-side{
+
+/* desktop nav */
+.site-nav-desktop{
+  display: flex;
+  margin: auto;
+}
+
+/* mobile nav */
+.site-nav-mobile{
     background-color: #fff;
     position: fixed;
     height: 100%;
@@ -38,18 +55,15 @@
     min-height: 3em;
     display: none;
     z-index: 1;
+    padding-top: 1.5em;
   }
-  
-  .site-nav-side li, a, ul {
-    font-size: 20px;
-    padding: 5px;
-    list-style-type: none;
-    text-transform: uppercase;
-    text-decoration: none;
-    justify-content: center;
-  }
-  
-  a:hover{
-    color: red;
-  }
+
+.site-nav-side li, a, ul {
+  font-size: 20px;
+  padding: 5px;
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: center;
+}
+
   
