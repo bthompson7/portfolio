@@ -105,7 +105,11 @@ body {
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem;
-    animation: fadein 2s;
+    transition: transform .2s;
+  }
+
+  .social-links a:hover{
+    transform: scale(1.2); 
   }
 
   .social-links i {
