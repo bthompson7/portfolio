@@ -20,11 +20,12 @@ export class ExperienceComponent implements OnInit {
     for (const ElementRef of this.elements) {
       let time = ElementRef.nativeElement.innerHTML
       let timeSplit = time.split(" ");
-      let startDate = new Date(timeSplit[0] + " 1 " + timeSplit[1]);
+      let startDate = new Date(timeSplit[0] + " 15 " + timeSplit[1]);
       let today = new Date();
       let diffInTime = today.getTime() - startDate.getTime();
       let diffInDays = Math.round(diffInTime / this.oneDay);
       this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " (" + (diffInDays / 365).toFixed(1) + " years)");
+      console.log("Job Time: " + (diffInDays / 365).toFixed(1) + " / " + diffInDays);
     }
   }
 
