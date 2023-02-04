@@ -64,6 +64,8 @@ body {
     color: white;
     transition: top 0.3s;  
     width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   
   .section-header {
@@ -103,7 +105,7 @@ body {
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem;
-    animation: fadein 2s;
+    transition: transform .2s;
   }
 
   .social-links i {
