@@ -5,13 +5,14 @@
 
 .experience{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+
   }
   
   .experience-block {
     margin: 10px;
-    text-align: center;
+    flex: 1 0 41%; /* 41% for 2 items per row , 21% for 4 */
     font-size: 17px;
   }
 
