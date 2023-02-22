@@ -12,12 +12,5 @@
   
   .experience-block {
     margin: 10px;
-    flex: 1 0 41%; /* 41% for 2 items per row , 21% for 4 */
     font-size: 17px;
   }
-
-  .experience-block img {
-    width: 100px;
-    height: 100px;
-  }
-

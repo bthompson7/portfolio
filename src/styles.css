@@ -73,10 +73,17 @@ body {
     text-transform: uppercase;
   }
 
-  .section i {
+  .section i{
     font-size: 6rem;
     flex: 0 0 21%;
+    
 }
+
+.section img{
+  width:100px;
+  height:100px;
+}
+
 
   /* skills css */
 
@@ -85,10 +92,16 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin: 5px;
+
 }
 
 .skills-list i {
   padding:5px
+}
+
+.skills-list img{
+  width:100px;
+  height:100px;
 }
 
 /* social links */
