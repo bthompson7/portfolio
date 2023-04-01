@@ -71,6 +71,7 @@ body {
   .section-header {
     border-bottom: 1px solid #cec8c8;
     text-transform: uppercase;
+    padding:25px;
   }
 
   .section i{
