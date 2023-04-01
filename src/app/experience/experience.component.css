@@ -5,18 +5,12 @@
 
 .experience{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
+
   }
   
   .experience-block {
     margin: 10px;
-    text-align: center;
     font-size: 17px;
   }
-
-  .experience-block img {
-    width: 100px;
-    height: 100px;
-  }
-
