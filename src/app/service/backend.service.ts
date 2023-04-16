@@ -8,7 +8,7 @@ import { catchError, retry, map } from 'rxjs/operators'
 })
 
 export class BackendService {
-  private url = "https://r7ymo0glib.execute-api.us-east-1.amazonaws.com/analytics";
+  private url = "https://api.benpthom.com/analytics";
 
   constructor(private http: HttpClient) {
 
