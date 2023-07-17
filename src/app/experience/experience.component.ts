@@ -20,18 +20,18 @@ export class ExperienceComponent implements OnInit {
     for (const ElementRef of this.elements) {
       let time = ElementRef.nativeElement.innerHTML
       let timeSplit = time.split(" ");
+
       // I would put the extact start date but this is going to apply to all jobs so using the first of the month will have to do
       let startDate = new Date(timeSplit[0] + " 1 " + timeSplit[1]);
       let today = new Date();
       let diffInTime = today.getTime() - startDate.getTime();
       let diffInDays = Math.round(diffInTime / this.oneDay);
-      this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " (" + (diffInDays / 365).toFixed(1) + " years)");
-      console.log("Job Time: " + (diffInDays / 365).toFixed(1) + " / " + diffInDays);
+      let years = diffInDays / 365;
+
+      if (years >= 1) {
+        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " (" + years.toFixed(1) + " years)");
+      }
     }
-  }
-
-  calcTimeSince() {
-
   }
 
 }
