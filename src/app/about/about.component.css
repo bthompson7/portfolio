@@ -57,9 +57,9 @@
 }
 
 .panel{
-    width:40rem;
+   /* width:40rem; */
     position: relative;
-    max-width: 100%;
+   /* max-width: 100%; */
     margin: 0 auto; 
     padding: 50px;
 }

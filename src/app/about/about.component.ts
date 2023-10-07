@@ -30,6 +30,7 @@ export class AboutComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    let displayBlock: string = "block";
 
 
     // hide content sections
@@ -41,17 +42,17 @@ export class AboutComponent implements OnInit {
 
     this.expBtn.nativeElement.onclick = () => {
       this.aboutMe.nativeElement.style.display = 'none';
-      this.expPanel.nativeElement.style.display = 'flex';
+      this.expPanel.nativeElement.style.display = displayBlock;
     }
 
     this.skillBtn.nativeElement.onclick = () => {
       this.aboutMe.nativeElement.style.display = 'none';
-      this.skillsPanel.nativeElement.style.display = 'flex';
+      this.skillsPanel.nativeElement.style.display = displayBlock;
     }
 
     this.projectsBtn.nativeElement.onclick = () => {
       this.aboutMe.nativeElement.style.display = 'none';
-      this.projectsPanel.nativeElement.style.display = 'flex';
+      this.projectsPanel.nativeElement.style.display = displayBlock;
     }
 
     this.expBackBtn.nativeElement.onclick = () => {
