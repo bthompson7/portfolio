@@ -64,7 +64,6 @@ body {
   /* section css */
 
 .section {
-    /*background-color: var(--background); */
     height: auto;
     display: flex;
     flex-direction: column;

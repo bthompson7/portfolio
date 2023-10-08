@@ -1,0 +1,67 @@
+<div class="about-me" #aboutMe>
+
+    <div class="name-block">
+        <h1 class="name-text">Ben</h1>
+        <i class="site-icon fa fa-solid fa-terminal"></i>
+        <h1 class="name-text">Thompson</h1>
+    </div>
+
+    <!--- Navigation Bar -->
+    <ul class=" nav-menu">
+        <li>
+            <a class="nav-menu-btn" href="#about" #aboutBtn>About</a>
+        </li>
+        <li>
+            <a class="nav-menu-btn" href="#experience" #expBtn>Experience</a>
+        </li>
+        <li>
+            <a class="nav-menu-btn" href="#skills" #skillBtn>Skills</a>
+        </li>
+        <li>
+            <a class="nav-menu-btn" href="#projects" #projectsBtn>Projects</a>
+        </li>
+    </ul>
+
+    <!--- Footer -->
+    <div class="footer">
+        <p class="copyright-text">© 2023 Benjamin Thompson. Images: <a href="https://unsplash.com/photos/G9i_plbfDgk"
+                target="_blank" rel="noopener noreferrer">unsplash</a></p>
+    </div>
+</div>
+
+<!-- Content Panels -->
+<div class="">
+
+    <!-- About --->
+    <div class="panel" #aboutPanel>
+        <a class="close-btn" #aboutBackBtn>
+            <i class="fa fa-solid fa-times"></i>
+        </a>
+        <app-about></app-about>
+    </div>
+
+
+    <!-- Experience --->
+    <div class="panel" #expPanel>
+        <a class="close-btn" #expBackBtn>
+            <i class="fa fa-solid fa-times"></i>
+        </a>
+        <app-experience></app-experience>
+    </div>
+
+    <!-- Skills --->
+    <div class="panel" #skillsPanel>
+        <a class="close-btn" #skillsBackBtn>
+            <i class="fa fa-solid fa-times"></i>
+        </a>
+        <app-skills></app-skills>
+    </div>
+
+    <!-- Projects --->
+    <div class="panel" #projectsPanel>
+        <a class="close-btn" #projectsBackBtn>
+            <i class="fa fa-solid fa-times"></i>
+        </a>
+        <app-projects></app-projects>
+    </div>
+</div>

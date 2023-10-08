@@ -1,57 +1,17 @@
-<div class="about-me" #aboutMe>
-    <h1 class="name-text">Ben Thompson</h1>
-    <p class="about-me-desc"> I'm a Software Developer with over 2 years of experience and a Bachelor's Degree in
-        Computer Science from the University of Southern Maine.</p>
-
-    <!--- Navigation Bar -->
-    <ul class="nav-menu">
-        <li>
-            <a class="nav-menu-btn" href="#experience" #expBtn>Experience</a>
-        </li>
-        <li>
-            <a class="nav-menu-btn" href="#skills" #skillBtn>Skills</a>
-        </li>
-        <li>
-            <a class="nav-menu-btn" href="#projects" #projectsBtn>Projects</a>
-        </li>
-    </ul>
-
-    <!--- Footer -->
-    <div class="footer">
-        <div class="social-links footer-styles">
-            <a href="https://www.github.com/bthompson7" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-github" href=""></i></a>
-            <a href="https://www.linkedin.com/in/benpthompson" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-linkedin" href=""></i></a>
-        </div>
-        <p class="copyright-text">© 2023 Benjamin Thompson. Images: <a href="https://unsplash.com/photos/G9i_plbfDgk"
-                target="_blank" rel="noopener noreferrer">unsplash</a></p>
+<header id="skills" class="section">
+    <div class="section-header">
+        <h1>About Me</h1>
     </div>
-</div>
-
-<div class="">
-
-    <!-- Experience --->
-    <div class="panel" #expPanel>
-        <a class="close-btn" #expBackBtn>
-            <i class="fa fa-solid fa-times"></i>
-        </a>
-        <app-experience></app-experience>
+    <div>
+        <p class="about-me-desc"> I'm a Software Developer with over 2 years of experience and a Bachelor's Degree in
+            Computer Science from the University of Southern Maine.</p>
+    </div>
+    <div class="social-links footer-styles">
+        <a href="https://www.github.com/bthompson7" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-github" href=""></i></a>
+        <a href="https://www.linkedin.com/in/benpthompson" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-linkedin" href=""></i></a>
     </div>
 
-    <!-- Skills --->
-    <div class="panel" #skillsPanel>
-        <a class="close-btn" #skillsBackBtn>
-            <i class="fa fa-solid fa-times"></i>
-        </a>
-        <app-skills></app-skills>
-    </div>
 
-    <!-- Projects --->
-    <div class="panel" #projectsPanel>
-        <a class="close-btn" #projectsBackBtn>
-            <i class="fa fa-solid fa-times"></i>
-        </a>
-        <app-projects></app-projects>
-    </div>
-</div>
+</header>

@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
-import { MainComponent } from './main/main.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BackendService } from './service/backend.service';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
-    AboutComponent,
+    HomeComponent,
     SkillsComponent,
     ExperienceComponent,
-    MainComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +25,6 @@ import { BackendService } from './service/backend.service';
     FontAwesomeModule
   ],
   providers: [BackendService],
-  bootstrap: [MainComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }
