@@ -27,19 +27,18 @@ export class HomeComponent implements OnInit {
   @ViewChild('skillsBackBtn') skillsBackBtn: ElementRef;
   @ViewChild('projectsBackBtn') projectsBackBtn: ElementRef;
 
+  private timer: number
+
   constructor(private backendService: BackendService) {
 
   }
 
   ngOnInit(): void {
-    if (environment.production) {
-      this.backendService.logRequest().subscribe();
-    }
+    this.backendService.analyticsGetRequest();
   }
 
   ngAfterViewInit() {
     let displayBlock: string = "block";
-
 
     // hide content sections
     this.aboutPanel.nativeElement.style.display = 'none';
@@ -47,54 +46,65 @@ export class HomeComponent implements OnInit {
     this.skillsPanel.nativeElement.style.display = 'none';
     this.projectsPanel.nativeElement.style.display = 'none';
 
-    // onClick listeners
+    /* START onClick  */
 
+    // content buttons
     this.aboutBtn.nativeElement.onclick = () => {
       this.aboutMe.nativeElement.style.display = 'none';
       this.aboutPanel.nativeElement.style.display = displayBlock;
+      this.timer = Date.now();
     }
-
 
     this.expBtn.nativeElement.onclick = () => {
       this.aboutMe.nativeElement.style.display = 'none';
       this.expPanel.nativeElement.style.display = displayBlock;
+      this.timer = Date.now();
     }
 
     this.skillBtn.nativeElement.onclick = () => {
       this.aboutMe.nativeElement.style.display = 'none';
       this.skillsPanel.nativeElement.style.display = displayBlock;
+      this.timer = Date.now();
     }
 
     this.projectsBtn.nativeElement.onclick = () => {
       this.aboutMe.nativeElement.style.display = 'none';
       this.projectsPanel.nativeElement.style.display = displayBlock;
+      this.timer = Date.now();
     }
 
-
+    // back buttons
     this.aboutBackBtn.nativeElement.onclick = () => {
       this.aboutPanel.nativeElement.style.display = 'none';
       this.aboutMe.nativeElement.style.display = 'flex';
-
+      let diffInSeconds = ((Date.now() - this.timer) / 1000)
+      this.backendService.analyticsPostRequest("About", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
     }
 
     this.expBackBtn.nativeElement.onclick = () => {
       this.expPanel.nativeElement.style.display = 'none';
       this.aboutMe.nativeElement.style.display = 'flex';
+      let diffInSeconds = ((Date.now() - this.timer) / 1000)
+      this.backendService.analyticsPostRequest("Experience", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
 
     }
 
     this.skillsBackBtn.nativeElement.onclick = () => {
       this.skillsPanel.nativeElement.style.display = 'none';
       this.aboutMe.nativeElement.style.display = 'flex';
+      let diffInSeconds = ((Date.now() - this.timer) / 1000)
+      this.backendService.analyticsPostRequest("Skills", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
 
     }
 
     this.projectsBackBtn.nativeElement.onclick = () => {
       this.projectsPanel.nativeElement.style.display = 'none';
       this.aboutMe.nativeElement.style.display = 'flex';
-
+      let diffInSeconds = ((Date.now() - this.timer) / 1000)
+      this.backendService.analyticsPostRequest("Projects", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
     }
-    // end onClick
+
+    /* END onClick */
 
   }
 }
