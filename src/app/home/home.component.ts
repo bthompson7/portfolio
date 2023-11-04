@@ -1,6 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { BackendService } from '../service/backend.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',

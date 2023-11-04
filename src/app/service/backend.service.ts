@@ -34,13 +34,10 @@ export class BackendService {
     });
 
     if (!environment.production) {
+      console.log("pComponent_name: " + pComponent_name + " pView_duration " + pView_duration)
       return;
     }
 
     this.http.post(this.apiURL, JSON.stringify(dataToSend), { headers }).subscribe()
-  }
-
-  handleError(res: any) {
-    return throwError(() => new Error());
   }
 }
