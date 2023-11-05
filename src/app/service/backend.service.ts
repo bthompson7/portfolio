@@ -1,26 +1,43 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { throwError } from 'rxjs';
-import { catchError, retry, map } from 'rxjs/operators'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class BackendService {
-  private url = "https://api.benpthom.com/analytics";
+  private apiURL = "https://api.benpthom.com/analytics";
 
   constructor(private http: HttpClient) {
 
   }
 
-  logRequest() {
-    return this.http
-      .get<any[]>(this.url)
-      .pipe(map(data => data), catchError(this.handleError));
+  analyticsGetRequest() {
+    if (!environment.production) {
+      return;
+    }
+
+    return this.http.get<any[]>(this.apiURL).subscribe()
   }
 
-  handleError(res: any) {
-    return throwError(() => new Error('Error fetching data'));
+  analyticsPostRequest(pComponent_name: string, pView_duration: number) {
+    const dataToSend = {
+      component_name: pComponent_name,
+      view_duration: pView_duration
+    };
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    });
+
+    if (!environment.production) {
+      console.log("pComponent_name: " + pComponent_name + " pView_duration " + pView_duration)
+      return;
+    }
+
+    this.http.post(this.apiURL, JSON.stringify(dataToSend), { headers }).subscribe()
   }
 }
