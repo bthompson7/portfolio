@@ -5,7 +5,8 @@
         <h1 class="name-text">Thompson</h1>
     </div>
 
-    <!--- Navigation Bar -->
+    <!--- Navigation Buttons -->
+<nav>
     <ul class="nav-menu">
         <li>
             <a class="nav-menu-btn" href="#about" #aboutBtn>About</a>
@@ -20,13 +21,14 @@
             <a class="nav-menu-btn" href="#projects" #projectsBtn>Projects</a>
         </li>
     </ul>
+</nav>
 
     <!--- Footer -->
-    <div class="footer">
+    <footer class="footer">
         <p class="copyright-text">© 2024 Benjamin Thompson. Background: <a
                 href="https://unsplash.com/photos/mountain-range-Sk32_wG8lcQ" target="_blank"
                 rel="noopener noreferrer">unsplash.com</a></p>
-    </div>
+    </footer>
 </div>
 
 <!-- Content Panels -->
@@ -34,34 +36,55 @@
 
     <!-- About --->
     <div class="panel" #aboutPanel>
-        <a class="close-btn" #aboutBackBtn>
-            <i class="fa fa-solid fa-times"></i>
-        </a>
+        <div class="burger-menu" #aboutBackBtn>
+            <div class="inner">
+            <div class="top menu-line">
+            </div>
+            <div class="bottom menu-line">
+        </div>
+    </div>
+        </div>
         <app-about></app-about>
     </div>
 
-
     <!-- Experience --->
     <div class="panel" #expPanel>
-        <a class="close-btn" #expBackBtn>
-            <i class="fa fa-solid fa-times"></i>
-        </a>
+        <div class="burger-menu" #expBackBtn>
+            <div class="inner">
+            <div class="top menu-line">
+            </div>
+            <div class="bottom menu-line">
+            </div>
+        </div>
+        </div>
+
         <app-experience></app-experience>
     </div>
 
     <!-- Skills --->
     <div class="panel" #skillsPanel>
-        <a class="close-btn" #skillsBackBtn>
-            <i class="fa fa-solid fa-times"></i>
-        </a>
+        <div class="burger-menu" #skillsBackBtn>
+            <div class="inner">
+            <div class="top menu-line">
+            </div>
+            <div class="bottom menu-line">
+            </div>
+        </div>
+        </div>
         <app-skills></app-skills>
     </div>
 
     <!-- Projects --->
     <div class="panel" #projectsPanel>
-        <a class="close-btn" #projectsBackBtn>
-            <i class="fa fa-solid fa-times"></i>
-        </a>
+        <div class="burger-menu" #projectsBackBtn>
+            <div class="inner">
+
+            <div class="top menu-line">
+            </div>
+            <div class="bottom menu-line">
+            </div>
+        </div>
+        </div>
         <app-projects></app-projects>
     </div>
 </div>
