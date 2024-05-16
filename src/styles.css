@@ -17,9 +17,10 @@ body {
   min-height: 100vh;
   /* background image */
   background-image: url("./assets/img/bg.jpeg");
-  background-position:fixed; 
   background-size: cover; 
   background-repeat: no-repeat;  
+  background-position: center; 
+  font-family: "Roboto", sans-serif;
 }
 
 

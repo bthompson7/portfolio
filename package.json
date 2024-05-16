@@ -23,7 +23,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "cytoscape": "^3.26.0",
-    "devicon": "^2.15.1",
+    "devicon": "^2.16.0",
     "font-awesome": "^4.7.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
