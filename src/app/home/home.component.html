@@ -1,11 +1,11 @@
-<div class="about-me" #aboutMe>
 
-    <div class="name-block">
+    <!--- Navigation Buttons -->
+<header  class="about-me" #header>
+        <div class="name-block">
         <h1 class="name-text">Ben</h1>
         <h1 class="name-text">Thompson</h1>
     </div>
 
-    <!--- Navigation Buttons -->
 <nav>
     <ul class="nav-menu">
         <li>
@@ -22,18 +22,10 @@
         </li>
     </ul>
 </nav>
-
-    <!--- Footer -->
-    <footer class="footer">
-        <p class="copyright-text">© 2024 Benjamin Thompson. Background: <a
-                href="https://unsplash.com/photos/mountain-range-Sk32_wG8lcQ" target="_blank"
-                rel="noopener noreferrer">unsplash.com</a></p>
-    </footer>
-</div>
+</header>
 
 <!-- Content Panels -->
-<div class="">
-
+<main>
     <!-- About --->
     <div class="panel" #aboutPanel>
         <div class="burger-menu" #aboutBackBtn>
@@ -42,7 +34,7 @@
             </div>
             <div class="bottom menu-line">
         </div>
-    </div>
+        </div>
         </div>
         <app-about></app-about>
     </div>
@@ -87,4 +79,12 @@
         </div>
         <app-projects></app-projects>
     </div>
-</div>
+</main>
+
+
+    <!--- Footer -->
+    <footer class="footer" #footer>
+        <p class="copyright-text">© 2024 Benjamin Thompson. Background: <a
+                href="https://unsplash.com/photos/mountain-range-Sk32_wG8lcQ" target="_blank"
+                rel="noopener noreferrer">unsplash</a></p>
+    </footer>
