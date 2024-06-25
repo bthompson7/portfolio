@@ -102,12 +102,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 5px;
+    margin: 0px;
 
 }
 
 .skills-list i {
-  padding:5px
+  padding:0px
 }
 
 .skills-list img{
