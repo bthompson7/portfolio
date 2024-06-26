@@ -37,8 +37,9 @@ export class ExperienceComponent implements OnInit {
       let diffInDays = Math.round(diffInTime / this.oneDay);
       let years = diffInDays / 365;
 
-      if (years >= 1) {
-        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " (" + years.toFixed(1) + " years)");
+  
+      if(years >= 1){
+        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + years.toFixed(1) + " years ");
       }
     }
   }

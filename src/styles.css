@@ -102,7 +102,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0px;
+    margin-top: 3px;
 
 }
 
@@ -138,3 +138,7 @@ body {
     font-size: 2rem;
     line-height: 3.5rem;
   }
+
+  .link{
+    text-decoration: none;
+}
