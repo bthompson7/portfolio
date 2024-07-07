@@ -10,6 +10,7 @@ export class ExperienceComponent implements OnInit {
   private oneDay = 1000 * 60 * 60 * 24;
 
   constructor(private renderer: Renderer2) {
+
   }
 
   ngOnInit(): void {
@@ -20,7 +21,6 @@ export class ExperienceComponent implements OnInit {
     for (const ElementRef of this.elements) {
       let time = ElementRef.nativeElement.innerHTML
       let timeSplit = time.split(" ");
-      console.log(timeSplit);
 
       // I would put the extact start date but this is going to apply to all jobs so using the first of the month will have to do
       let startDate = new Date(timeSplit[0] + " 1 " + timeSplit[1]);
@@ -34,14 +34,38 @@ export class ExperienceComponent implements OnInit {
         diffInTime = endDate.getTime() - startDate.getTime();
       }
 
-      let diffInDays = Math.round(diffInTime / this.oneDay);
-      let years = diffInDays / 365;
+      let diffInDays = diffInTime / this.oneDay;
+      let years = (diffInDays / 365).toFixed(1).split(".");
+      let year = parseInt(years[0])
+      let month = parseInt(years[1])
+      let timeDisplayString =  time + " &middot; "
 
-  
-      if(years >= 1){
-        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + years.toFixed(1) + " years ");
+      // year
+      if(year === 1){
+        timeDisplayString += year + " year "
+      }else if(year > 1){
+        timeDisplayString += year + " years "
       }
+
+      // month
+      if(month === 1){
+        timeDisplayString += year + " month "
+      }else if(month > 1){
+        timeDisplayString += month + " months "
+      }
+
+      this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', timeDisplayString);
+      /*
+     
+      if(year < 1 && month > 1){
+        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + month + " months");
+      }else if(year === 1){
+        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + year + " year " + month + " months");
+      }else if(year > 1){
+        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + year + " years " + month + " months");
+      }
+
+*/
     }
   }
-
 }
