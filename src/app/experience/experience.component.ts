@@ -55,17 +55,6 @@ export class ExperienceComponent implements OnInit {
       }
 
       this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', timeDisplayString);
-      /*
-     
-      if(year < 1 && month > 1){
-        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + month + " months");
-      }else if(year === 1){
-        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + year + " year " + month + " months");
-      }else if(year > 1){
-        this.renderer.setProperty(ElementRef.nativeElement, 'innerHTML', time + " &middot; " + year + " years " + month + " months");
-      }
-
-*/
     }
   }
 }
