@@ -49,7 +49,7 @@ export class ExperienceComponent implements OnInit {
 
       // month
       if(month === 1){
-        timeDisplayString += year + " month "
+        timeDisplayString += month + " month "
       }else if(month > 1){
         timeDisplayString += month + " months "
       }
