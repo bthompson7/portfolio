@@ -7,6 +7,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BackendService } from './service/backend.service';
 import { AboutComponent } from './about/about.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({ declarations: [
         HomeComponent,
@@ -14,6 +15,6 @@ import { AboutComponent } from './about/about.component';
         ExperienceComponent,
         ProjectsComponent,
         AboutComponent
-    ],
-    bootstrap: [HomeComponent], imports: [BrowserModule], providers: [BackendService, provideHttpClient(withInterceptorsFromDi())] })
+        ],
+    bootstrap: [HomeComponent], imports: [BrowserModule,  NgOptimizedImage], providers: [BackendService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
