@@ -20,8 +20,6 @@ export class HomeComponent implements OnInit {
   @ViewChild('skillsPanel') skillsPanel: ElementRef;
   @ViewChild('projectsPanel') projectsPanel: ElementRef;
   @ViewChild('header') header: ElementRef;
-  @ViewChild('footer') footer: ElementRef;
-
 
   // panel "X" buttons
   @ViewChild('aboutBackBtn') aboutBackBtn: ElementRef;
@@ -53,7 +51,6 @@ export class HomeComponent implements OnInit {
     // content buttons
     this.aboutBtn.nativeElement.onclick = () => {
       this.header.nativeElement.style.display = 'none';
-      this.footer.nativeElement.style.display = 'none';
 
       this.aboutPanel.nativeElement.style.display = displayBlock;
       this.timer = Date.now();
@@ -61,15 +58,12 @@ export class HomeComponent implements OnInit {
 
     this.expBtn.nativeElement.onclick = () => {
       this.header.nativeElement.style.display = 'none';
-      this.footer.nativeElement.style.display = 'none';
-
       this.expPanel.nativeElement.style.display = displayBlock;
       this.timer = Date.now();
     }
 
     this.skillBtn.nativeElement.onclick = () => {
       this.header.nativeElement.style.display = 'none';
-      this.footer.nativeElement.style.display = 'none';
 
       this.skillsPanel.nativeElement.style.display = displayBlock;
       this.timer = Date.now();
@@ -77,7 +71,6 @@ export class HomeComponent implements OnInit {
 
     this.projectsBtn.nativeElement.onclick = () => {
       this.header.nativeElement.style.display = 'none';
-      this.footer.nativeElement.style.display = 'none';
 
       this.projectsPanel.nativeElement.style.display = displayBlock;
       this.timer = Date.now();
@@ -87,7 +80,6 @@ export class HomeComponent implements OnInit {
     this.aboutBackBtn.nativeElement.onclick = () => {
       this.aboutPanel.nativeElement.style.display = 'none';
       this.header.nativeElement.style.display = 'flex';
-      this.footer.nativeElement.style.display = 'block';
 
       let diffInSeconds = ((Date.now() - this.timer) / 1000)
       this.backendService.analyticsPostRequest("About", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
@@ -96,7 +88,6 @@ export class HomeComponent implements OnInit {
     this.expBackBtn.nativeElement.onclick = () => {
       this.expPanel.nativeElement.style.display = 'none';
       this.header.nativeElement.style.display = 'flex';
-      this.footer.nativeElement.style.display = 'block';
 
       let diffInSeconds = ((Date.now() - this.timer) / 1000)
       this.backendService.analyticsPostRequest("Experience", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
@@ -106,7 +97,6 @@ export class HomeComponent implements OnInit {
     this.skillsBackBtn.nativeElement.onclick = () => {
       this.skillsPanel.nativeElement.style.display = 'none';
       this.header.nativeElement.style.display = 'flex';
-      this.footer.nativeElement.style.display = 'block';
 
       let diffInSeconds = ((Date.now() - this.timer) / 1000)
       this.backendService.analyticsPostRequest("Skills", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
@@ -116,7 +106,6 @@ export class HomeComponent implements OnInit {
     this.projectsBackBtn.nativeElement.onclick = () => {
       this.projectsPanel.nativeElement.style.display = 'none';
       this.header.nativeElement.style.display = 'flex';
-      this.footer.nativeElement.style.display = 'block';
 
       let diffInSeconds = ((Date.now() - this.timer) / 1000)
       this.backendService.analyticsPostRequest("Projects", Math.round((diffInSeconds + Number.EPSILON) * 100) / 100)
