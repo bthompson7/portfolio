@@ -18,8 +18,6 @@
     font-size: calc(10px + 2vmin);
     transition: top 0.3s;  
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
     color: white;
     position: fixed;
     top: 50%;
@@ -139,16 +137,3 @@ a:visited, a:link{
 .bottom{
    transform: translatex(3.5px) rotate(135deg);
 }
-
-.footer{
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  left: 50%;
-  right: 50%;
-
-}
-
-
