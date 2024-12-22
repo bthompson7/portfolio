@@ -3,26 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HomeComponent } from './home/home.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectsComponent } from './projects/projects.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BackendService } from './service/backend.service';
 import { AboutComponent } from './about/about.component';
+import { NgOptimizedImage } from '@angular/common';
 
-@NgModule({
-  declarations: [
-    HomeComponent,
-    SkillsComponent,
-    ExperienceComponent,
-    ProjectsComponent,
-    AboutComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FontAwesomeModule
-  ],
-  providers: [BackendService],
-  bootstrap: [HomeComponent]
-})
+@NgModule({ declarations: [
+        HomeComponent,
+        SkillsComponent,
+        ExperienceComponent,
+        ProjectsComponent,
+        AboutComponent
+        ],
+    bootstrap: [HomeComponent], imports: [BrowserModule,  NgOptimizedImage], providers: [BackendService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

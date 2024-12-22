@@ -1,6 +1,6 @@
 /* Global Styles */
 
-@import "~font-awesome/css/font-awesome.min.css";
+@import "font-awesome/css/font-awesome.min.css";
 @import "devicon/devicon.min.css";
 
 html {
@@ -89,12 +89,6 @@ body {
     flex: 0 0 21%;
     
 }
-
-.section img{
-  width:100px;
-  height:100px;
-}
-
 
   /* skills css */
 
